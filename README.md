@@ -51,8 +51,6 @@ The design was verified through a self-checking Verilog testbench, iterating thr
 
 Simulation performed using QuestaSim.
 
-![Simulation Result](https://github.com/trungpham141205/Ripple_Carry_Adder_4-bit/blob/main/images/ripple_carry_adder_4bit_tb.png)
-
 Testbench Features:
 
 Loops through all 4-bit combinations (A, B, Cin).
@@ -61,6 +59,7 @@ Auto-checks output with expected values.
 
 Displays PASS/FAIL results in console.
 
+![Simulation Result](https://github.com/trungpham141205/Ripple_Carry_Adder_4-bit/blob/main/images/ripple_carry_adder_4bit_tb.png)
 
 Simulation Result:
 
