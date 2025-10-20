@@ -1,0 +1,132 @@
+m255
+K4
+z2
+Z0 !s12c _opt2
+Z1 !s99 nomlopt
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+!s11f vlog 2024.3 2024.09, Sep 10 2024
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dD:/Project/Ripple_Carry_Adder_4-bit/results/sim
+T_opt2
+!s110 1760950319
+V?`YePdmTh5`khjT]W^GGJ1
+04 26 4 work ripple_carry_adder_4bit_tb fast 0
+=1-14ac606edb59-68f5f82f-1d-4c4c
+R1
+!s12f OEM100
+!s12b OEM100
+!s124 OEM10U6 
+!s135 nogc
+o-quiet -auto_acc_if_foreign -work work +acc
+Z2 tCvgOpt 0
+n@_opt2
+OL;O;2024.3;79
+vfull_adder
+2../../../Full_Adder/src/full_adder.v
+Z3 !s110 1760950318
+!i10b 1
+!s100 beZa:W@MhERVAmYTm^kTN2
+I^?Uc1HQ?Gcmd6e1Em=c[31
+Z4 dD:/Project/Ripple_Carry_Adder_4bit/results/sim
+w1760595368
+8../../../Full_Adder/src/full_adder.v
+F../../../Full_Adder/src/full_adder.v
+!i122 69
+L0 7 12
+Z5 VDg1SIo80bB@j0V0VzS_@n1
+Z6 OL;L;2024.3;79
+r1
+!s85 0
+31
+Z7 !s108 1760950318.000000
+!s107 ../../../Full_Adder/src/full_adder.v|
+!s90 -reportprogress|300|../../../Full_Adder/src/full_adder.v|
+!i113 0
+Z8 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
+vripple_carry_adder_4bit
+2../../src/ripple_carry_adder_4bit.v
+R3
+!i10b 1
+!s100 MaTGdPB@TkOI032ncn4oe0
+I:dd@gd2NOiQTjh=6R@TkV2
+R4
+w1760948874
+8../../src/ripple_carry_adder_4bit.v
+F../../src/ripple_carry_adder_4bit.v
+!i122 70
+L0 7 16
+R5
+R6
+r1
+!s85 0
+31
+R7
+!s107 ../../src/ripple_carry_adder_4bit.v|
+!s90 -reportprogress|300|../../src/ripple_carry_adder_4bit.v|
+!i113 0
+R8
+R2
+vripple_carry_adder_4bit_tb
+2../../sim/ripple_carry_adder_4bit_tb.v
+R3
+!i10b 1
+!s100 4>MSgT4X85DQz?1WTO3DR3
+I0G>5;OcRSWHDc7ao65_?A2
+R4
+w1760950125
+8../../sim/ripple_carry_adder_4bit_tb.v
+F../../sim/ripple_carry_adder_4bit_tb.v
+!i122 71
+L0 2 48
+R5
+R6
+r1
+!s85 0
+31
+R7
+!s107 ../../sim/ripple_carry_adder_4bit_tb.v|
+!s90 -reportprogress|300|../../sim/ripple_carry_adder_4bit_tb.v|
+!i113 0
+R8
+R2
