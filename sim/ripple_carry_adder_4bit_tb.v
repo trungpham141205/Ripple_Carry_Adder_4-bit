@@ -35,7 +35,6 @@ module ripple_carry_adder_4bit_tb();
                 end
             end
         end
-
         $display("----------------------------------------------------------");
         $display("Total tests: %0d | Passed: %0d | Failed: %0d", total_tests, pass_count, fail_count);
         $display("----------------------------------------------------------");
