@@ -9,25 +9,23 @@ The project demonstrates a complete digital design flow, including RTL design, f
 
 1. Specification
 
-Objective
-
-To design and verify a 4-bit Ripple Carry Adder with:
+Objective: To design and verify a 4-bit Ripple Carry Adder with
 
 Inputs:
 
-A[3:0], B[3:0] – 4-bit binary numbers
+            A[3:0], B[3:0] – 4-bit binary numbers
 
-Cin – 1-bit carry input
+            Cin – 1-bit carry input
 
 Outputs:
 
-Sum[3:0] – 4-bit result
+            Sum[3:0] – 4-bit result
 
-Cout – 1-bit carry output
+            Cout – 1-bit carry output
 
 The Ripple Carry Adder performs: 
 
-Sum = A + B + Cin
+            Sum = A + B + Cin
 
 Circuit diagram:
 
