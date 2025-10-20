@@ -48,9 +48,9 @@ R1
 !i10e 25
 !i10f 100
 cModel Technology
-dD:/Project/Ripple_Carry_Adder_4-bit/results/sim
+Z2 dD:/Project/Ripple_Carry_Adder_4-bit/results/sim
 T_opt2
-Z2 !s110 1760952269
+!s110 1760952269
 VX68eINoj?P7GVFFOdh=AH3
 04 26 4 work ripple_carry_adder_4bit_tb fast 0
 =1-14ac606edb59-68f5ffcd-225-37f8
@@ -63,9 +63,10 @@ o-quiet -auto_acc_if_foreign -work work +acc
 Z3 tCvgOpt 0
 n@_opt2
 OL;O;2024.3;79
+R2
 vfull_adder
 2../../src/full_adder.v
-Z4 !s110 1760952268
+Z4 !s110 1760974667
 !i10b 1
 !s100 ^8TCVLm7_7DUN@Wll_l^C3
 IG6M7zTAOo=ThAdZ6H^z_c2
@@ -73,18 +74,18 @@ Z5 dD:/Project/Ripple_Carry_Adder_4bit/results/sim
 w1760952232
 8../../src/full_adder.v
 F../../src/full_adder.v
-!i122 72
+!i122 75
 L0 1 12
 Z6 VDg1SIo80bB@j0V0VzS_@n1
 Z7 OL;L;2024.3;79
 r1
 !s85 0
 31
-Z8 !s108 1760952268.000000
+!s108 1760974666.000000
 !s107 ../../src/full_adder.v|
 !s90 -reportprogress|300|../../src/full_adder.v|
 !i113 0
-Z9 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z8 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
 R3
 vripple_carry_adder_4bit
 2../../src/ripple_carry_adder_4bit.v
@@ -96,22 +97,22 @@ R5
 w1760950431
 8../../src/ripple_carry_adder_4bit.v
 F../../src/ripple_carry_adder_4bit.v
-!i122 73
+!i122 76
 L0 7 16
 R6
 R7
 r1
 !s85 0
 31
-R8
+Z9 !s108 1760974667.000000
 !s107 ../../src/ripple_carry_adder_4bit.v|
 !s90 -reportprogress|300|../../src/ripple_carry_adder_4bit.v|
 !i113 0
-R9
+R8
 R3
 vripple_carry_adder_4bit_tb
 2../../sim/ripple_carry_adder_4bit_tb.v
-R2
+R4
 !i10b 1
 !s100 4>MSgT4X85DQz?1WTO3DR3
 I0G>5;OcRSWHDc7ao65_?A2
@@ -119,16 +120,16 @@ R5
 w1760950125
 8../../sim/ripple_carry_adder_4bit_tb.v
 F../../sim/ripple_carry_adder_4bit_tb.v
-!i122 74
+!i122 77
 L0 2 48
 R6
 R7
 r1
 !s85 0
 31
-R8
+R9
 !s107 ../../sim/ripple_carry_adder_4bit_tb.v|
 !s90 -reportprogress|300|../../sim/ripple_carry_adder_4bit_tb.v|
 !i113 0
-R9
+R8
 R3
