@@ -41,6 +41,8 @@ R0
 R1
 R0
 R1
+R0
+R1
 !s11f vlog 2024.3 2024.09, Sep 10 2024
 13
 !s112 1.1
@@ -48,88 +50,87 @@ R1
 !i10e 25
 !i10f 100
 cModel Technology
-Z2 dD:/Project/Ripple_Carry_Adder_4-bit/results/sim
+dD:/Project/Ripple_Carry_Adder_4-bit/results/sim
 T_opt2
-!s110 1760952269
-VX68eINoj?P7GVFFOdh=AH3
+!s110 1761016114
+V?2cXJKMo=:hL2X]fSZ?;U3
 04 26 4 work ripple_carry_adder_4bit_tb fast 0
-=1-14ac606edb59-68f5ffcd-225-37f8
+=1-14ac606edb59-68f6f932-1b-6854
 R1
 !s12f OEM100
 !s12b OEM100
 !s124 OEM10U6 
 !s135 nogc
 o-quiet -auto_acc_if_foreign -work work +acc
-Z3 tCvgOpt 0
+Z2 tCvgOpt 0
 n@_opt2
 OL;O;2024.3;79
-R2
 vfull_adder
 2../../src/full_adder.v
-Z4 !s110 1760974667
+Z3 !s110 1761016113
 !i10b 1
 !s100 ^8TCVLm7_7DUN@Wll_l^C3
 IG6M7zTAOo=ThAdZ6H^z_c2
-Z5 dD:/Project/Ripple_Carry_Adder_4bit/results/sim
+Z4 dD:/Project/Ripple_Carry_Adder_4bit/results/sim
 w1760952232
 8../../src/full_adder.v
 F../../src/full_adder.v
-!i122 75
+!i122 78
 L0 1 12
-Z6 VDg1SIo80bB@j0V0VzS_@n1
-Z7 OL;L;2024.3;79
+Z5 VDg1SIo80bB@j0V0VzS_@n1
+Z6 OL;L;2024.3;79
 r1
 !s85 0
 31
-!s108 1760974666.000000
+!s108 1761016112.000000
 !s107 ../../src/full_adder.v|
 !s90 -reportprogress|300|../../src/full_adder.v|
 !i113 0
-Z8 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
-R3
+Z7 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
 vripple_carry_adder_4bit
 2../../src/ripple_carry_adder_4bit.v
-R4
+R3
 !i10b 1
 !s100 MaTGdPB@TkOI032ncn4oe0
 I:dd@gd2NOiQTjh=6R@TkV2
-R5
+R4
 w1760950431
 8../../src/ripple_carry_adder_4bit.v
 F../../src/ripple_carry_adder_4bit.v
-!i122 76
+!i122 79
 L0 7 16
+R5
 R6
-R7
 r1
 !s85 0
 31
-Z9 !s108 1760974667.000000
+Z8 !s108 1761016113.000000
 !s107 ../../src/ripple_carry_adder_4bit.v|
 !s90 -reportprogress|300|../../src/ripple_carry_adder_4bit.v|
 !i113 0
-R8
-R3
+R7
+R2
 vripple_carry_adder_4bit_tb
 2../../sim/ripple_carry_adder_4bit_tb.v
-R4
+R3
 !i10b 1
-!s100 4>MSgT4X85DQz?1WTO3DR3
-I0G>5;OcRSWHDc7ao65_?A2
-R5
-w1760950125
+!s100 kHnT^PD7^bZdH7a7iCkk33
+I[K6HTHQ^O:0YWJ_GDh9[;3
+R4
+w1760975924
 8../../sim/ripple_carry_adder_4bit_tb.v
 F../../sim/ripple_carry_adder_4bit_tb.v
-!i122 77
-L0 2 48
+!i122 80
+L0 2 50
+R5
 R6
-R7
 r1
 !s85 0
 31
-R9
+R8
 !s107 ../../sim/ripple_carry_adder_4bit_tb.v|
 !s90 -reportprogress|300|../../sim/ripple_carry_adder_4bit_tb.v|
 !i113 0
-R8
-R3
+R7
+R2
