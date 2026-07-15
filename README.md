@@ -1,128 +1,110 @@
-# Ripple_Carry_Adder_4bit
+# 4-bit Ripple-Carry Adder
 
-This project implements a 4-bit Ripple Carry Adder (RCA) using Verilog HDL.
-It extends the Full Adder design by cascading four 1-bit full adders, forming a 4-bit arithmetic circuit capable of performing binary addition on two 4-bit numbers with carry propagation.
+A structural 4-bit ripple-carry adder built from four 1-bit full adders. The project includes exhaustive functional verification and an Intel Quartus educational implementation flow.
 
-The project demonstrates a complete digital design flow, including RTL design, functional verification, logic synthesis, and timing analysis using Intel Quartus Prime and ModelSim/QuestaSim.
+## Design status
 
+| Item | Status |
+|---|---|
+| Hierarchical RTL | Implemented |
+| Exhaustive self-checking testbench | Implemented (512 combinations) |
+| Quartus project/reports | Included |
+| Timing constraints | Included |
 
+## Specification
 
-1. Specification
+| Property | Value |
+|---|---|
+| Design type | Combinational arithmetic datapath |
+| Operand width | 4 bits |
+| Function | `{cout, sum} = a + b + cin` |
+| Latency | Combinational; no clock cycles |
+| Core module | `ripple_carry_adder_4bit` |
+| FPGA wrapper | `top_ripple_carry_adder` |
 
-Objective: To design and verify a 4-bit Ripple Carry Adder with
+### Interface
 
-Inputs:
+| Port | Direction | Width | Description |
+|---|---|---:|---|
+| `a` | Input | 4 | First operand |
+| `b` | Input | 4 | Second operand |
+| `cin` | Input | 1 | Carry input |
+| `sum` | Output | 4 | Low four result bits |
+| `cout` | Output | 1 | Final carry |
 
-            A[3:0], B[3:0] – 4-bit binary numbers
+## Architecture
 
-            Cin – 1-bit carry input
+```text
+cin -> FA0 -> c0 -> FA1 -> c1 -> FA2 -> c2 -> FA3 -> cout
+        |sum0       |sum1       |sum2       |sum3
+```
 
-Outputs:
+Each full adder calculates one result bit. The critical combinational path may pass through all four carry stages; this simple regular structure trades speed for low design complexity.
 
-            Sum[3:0] – 4-bit result
+![Ripple-carry structure](images/circuit_diagram.png)
 
-            Cout – 1-bit carry output
+![RTL implementation](images/ripple_carry_adder_4bit.png)
 
-The Ripple Carry Adder performs: 
+## Repository structure
 
-            Sum = A + B + Cin
+```text
+.
+├── src/
+│   ├── full_adder.v
+│   ├── ripple_carry_adder_4bit.v
+│   └── top_ripple_carry_adder.v
+├── sim/
+│   ├── ripple_carry_adder_4bit_tb.v
+│   └── run.tcl
+├── constraints/ripple_carry_adder_4bit.sdc
+├── quartus_project/
+├── results/sim/
+└── images/
+```
 
-Circuit diagram:
+## Verification
 
+The self-checking testbench exhaustively iterates through:
 
-![Circuit Diagram](https://github.com/trungpham141205/Ripple_Carry_Adder_4-bit/blob/main/images/circuit_diagram.png)
+```text
+a   : 0 to 15
+b   : 0 to 15
+cin : 0 to 1
+```
 
+It compares `{cout, sum}` with a 5-bit behavioral reference. Total expected cases: `16 x 16 x 2 = 512`.
 
+```text
+Total tests: 512 | Passed: 512 | Failed: 0
+```
 
-2. Behavioral Description
+![Testbench](images/ripple_carry_adder_4bit_tb.png)
 
-Behavioral RTL description of Ripple Carry Adder written in Verilog.
+![Simulation result](images/stimulate%20%282%29.png)
 
+![Waveform](images/wave.png)
 
-![Behavioral Model](https://github.com/trungpham141205/Ripple_Carry_Adder_4-bit/blob/main/images/ripple_carry_adder_4bit.png)
+### Run with Questa/ModelSim
 
+```bash
+vsim -do sim/run.tcl
+```
 
+Or:
 
-3. Verification
+```tcl
+vlib work
+vlog src/full_adder.v src/ripple_carry_adder_4bit.v
+vlog sim/ripple_carry_adder_4bit_tb.v
+vsim -c work.ripple_carry_adder_4bit_tb -do "run -all; quit -f"
+```
 
-The design was verified through a self-checking Verilog testbench, iterating through all possible input combinations of A, B, and Cin.
+## Synthesis and timing
 
-Simulation performed using QuestaSim.
+![Quartus RTL Viewer](images/rtl_viewer.png)
 
-Testbench Features:
+![Fmax report](images/fmax_report.png)
 
-Loops through all 4-bit combinations (A, B, Cin).
+![Datasheet report](images/datasheet_report.png)
 
-Auto-checks output with expected values.
-
-Displays PASS/FAIL results in console.
-
-![Simulation Result](https://github.com/trungpham141205/Ripple_Carry_Adder_4-bit/blob/main/images/ripple_carry_adder_4bit_tb.png)
-
-Simulation Result:
-
-All 512 possible input cases (16×16×2) were successfully verified with 0 failed cases.
-
-![Simulation Result](https://github.com/trungpham141205/Ripple_Carry_Adder_4-bit/blob/main/images/stimulate%20(2).png)
-
-![Simulation Result](https://github.com/trungpham141205/Ripple_Carry_Adder_4-bit/blob/main/images/stimulate.png)
-
-
-
-4. Simulation & Debug
-
-Tool: QuestaSim
-
-Waveform Simulation
-
-Waveform shows propagation of carry and sum bits through the adder chain, confirming correct sequential carry behavior.
-
-![Waveform Simulation](https://github.com/trungpham141205/Ripple_Carry_Adder_4-bit/blob/main/images/wave.png) 
-
-
-
-5. Synthesis
-
-Tool Used: Intel Quartus Prime
-
-Objective:
-Translate the RTL Verilog description into a logic gate-level netlist and verify the synthesis results.
-
-RTL Viewer:
-Shows a hierarchical structure of four Full Adders connected in series, each consisting of XOR, AND, and OR gates.
-
-![RTL Viewer](https://github.com/trungpham141205/Ripple_Carry_Adder_4-bit/blob/main/images/rtl_viewer.png)
-
-
-
-6. Static Timing Analysis
-
-Tool: Intel Quartus Prime
-
-Timing and resource utilization are analyzed post-synthesis using Quartus STA tool.
-
-The design meets all timing requirements with positive slack, indicating successful synthesis and implementation.
-
-Check Fmax Summary
-
-![Fmax Report](https://github.com/trungpham141205/Ripple_Carry_Adder_4-bit/blob/main/images/fmax_report.png)
-
-Datasheet Report
-
-![Datasheet](https://github.com/trungpham141205/Ripple_Carry_Adder_4-bit/blob/main/images/datasheet_report.png)
-
-
-
-7. Conclusion
-
-The 4-bit Ripple Carry Adder was successfully:
-
-Designed using modular Verilog HDL.
-
-Simulated and verified with full test coverage.
-
-Synthesized and analyzed in Quartus.
-
-Ready for FPGA implementation.
-
-This project extends the Full Adder concept to multi-bit arithmetic, illustrating carry propagation and paving the way for more advanced adders such as Carry Lookahead Adders or Parallel Prefix Adders.
+For a wider or higher-frequency datapath, compare the ripple architecture with CLA or parallel-prefix adders. Do not extrapolate the committed timing report to a different FPGA or ASIC library.
