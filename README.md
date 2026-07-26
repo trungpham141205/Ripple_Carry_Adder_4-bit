@@ -1,19 +1,21 @@
 <div align="center">
-  <h1>🔗 4-bit Ripple-Carry Adder</h1>
+  <h1>4-bit Ripple-Carry Adder</h1>
   <p><strong>Structural arithmetic RTL built from a reusable full-adder chain</strong></p>
   <p>
-    <img src="https://img.shields.io/badge/HDL-Verilog-2563EB?style=for-the-badge" alt="Verilog" />
-    <img src="https://img.shields.io/badge/Architecture-Structural%20RCA-8B5CF6?style=for-the-badge" alt="Structural RCA" />
-    <img src="https://img.shields.io/badge/Verification-Exhaustive%20512%2F512-22C55E?style=for-the-badge" alt="Exhaustive 512 of 512 verification" />
-    <img src="https://img.shields.io/badge/Flow-Intel%20Quartus-0EA5E9?style=for-the-badge" alt="Intel Quartus" />
+    <img src="https://img.shields.io/badge/HDL-Verilog-2563EB?style=flat-square" alt="Verilog" />
+    <img src="https://img.shields.io/badge/Architecture-Structural%20RCA-8B5CF6?style=flat-square" alt="Structural RCA" />
+    <img src="https://img.shields.io/badge/Verification-Exhaustive%20512%2F512-22C55E?style=flat-square" alt="Exhaustive 512 of 512 verification" />
+    <img src="https://img.shields.io/badge/Flow-Intel%20Quartus-0EA5E9?style=flat-square" alt="Intel Quartus" />
   </p>
 </div>
 
 ---
 
+## Overview
+
 A structural 4-bit ripple-carry adder built from four 1-bit full adders. The project includes exhaustive functional verification and an Intel Quartus educational implementation flow.
 
-## Design status
+## Project snapshot
 
 | Item | Status |
 |---|---|
